@@ -28,46 +28,53 @@ a:hover {
 }
 
 
-
-
-.logo {
-    width: 120px;
-}
-
 .container {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+
+/*ABOUT*/
+.logo {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 15px;
 }
 
 .about {
-    width: 40%;
-    padding: 0 70px 0 70px;
+    flex: 2;
+    width: 80%;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.logo, .about p, .about ul {
-    margin-bottom: 20px!important;
+.about p, .about ul {
+    margin-bottom: 5px!important;
 }
 
 .protein-brand {
     font-family: 'Fredoka One', cursive;
 }
 
+.about p, .about li { 
+    font-size: 12px;
+}
+
 .about h3 {
-    margin-bottom: 10px;
+    align-self: center;
+    font-size: 14px;
     font-weight: 800;
     text-transform: uppercase;
 }
 
 .about ul li {
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .about h5 {
@@ -79,8 +86,12 @@ a:hover {
 }
 
 /*SCREENSHOT*/
+
 .screenshot {
-    width: 60%;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px;
     background-color: #09324D;
     display: flex;
     justify-content: center;
@@ -89,6 +100,121 @@ a:hover {
 }
 
 .screenshot img {
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 500px;
 }
+
+
+/*FOOTER*/
+footer {
+    text-align: center;
+}
+
+
+
+/*MOBILE*/
+@media screen and (min-width: 1100px) {
+    
+    .logo {
+        width: 120px;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .about {
+        flex: 2;
+        padding: 0 70px 0 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo, .about p, .about ul {
+        margin-bottom: 20px!important;
+    }
+
+    .protein-brand {
+        font-family: 'Fredoka One', cursive;
+    }
+
+    .about p, .about li { 
+        font-size: 14px;
+    }
+
+    .about h3 {
+        align-self: flex-start;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .about ul li {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .about h5 {
+        color: #999999;
+    }
+
+    .credits li {
+        margin-bottom: 0!important;
+    }
+
+
+    /*SCREENSHOT*/
+    .screenshot {
+        flex: 3;
+        width: 60%;
+        background-color: #09324D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .screenshot img {
+        width: 80%;
+        max-width: 1000px;
+    }
+
+
+    /*FOOTER*/
+    footer {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
